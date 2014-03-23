@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="pu">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+    <class>com.gmail.libra.learn.jpa_inheritance.BaseObject</class>
+    <class>com.gmail.libra.learn.jpa_inheritance.Node</class>
+    <class>com.gmail.libra.learn.jpa_inheritance.InnerNode</class>
+    <class>com.gmail.libra.learn.jpa_inheritance.LeafNode</class>
+
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql:jpa-inheritance"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.password" value="postgres"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+    </properties>
+  </persistence-unit>
+</persistence>
